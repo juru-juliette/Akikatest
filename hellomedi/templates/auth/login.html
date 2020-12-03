@@ -1,0 +1,94 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block content%}
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <div class="row">
+            <div class="col-md-2">
+
+
+            </div>
+            <div class="col-md-8">
+                    <div class="card mt-5">
+                            <img src="https://assets.materialup.com/uploads/f7fb023a-1295-4be1-999c-27103aa6a2df/preview.gif" style="height: 300px;" >
+                            <div class="card-body">
+                                {%if messages %}
+
+                                {%for message in messages%}
+                                <div class="alert alert-{{message.tags}}">
+                                    {{message}}
+                                </div>
+                                {%endfor%}
+                                
+                                {%endif%}
+
+
+                           <form action="{%url 'login'%}" method="post">
+                               {% csrf_token%}
+
+                         
+<div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="username" value="{{data.username}}" placeholder="Username">
+
+
+    </div>
+
+<div class="form-group">
+        <input class="form-control form-control-sm" type="password" name="password" placeholder="Password">
+
+
+    </div>
+
+    <input type="submit" class="btn btn-sm btn-block btn-primary" value="Login">
+
+                           </form>
+
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <hr>
+                                </div>
+                                
+                                <div class="col-md-5">
+                                    <hr>
+                                </div>
+                            </div>
+
+                           
+
+
+
+
+
+                            </div>
+                          </div>
+
+
+<div class="card mt-4">
+    <div class="card-body">
+        <p>
+           Need an account? <a href="{% url 'register' %}">Register</a>
+        </p>
+    </div>
+</div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+
+{% endblock %}

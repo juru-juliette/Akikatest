@@ -7,3 +7,4 @@ from .models import *
 admin.site.register(NewsRecipients)
 
 admin.site.register(News_showbiz)
+admin.site.register(Appointment)

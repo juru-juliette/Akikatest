@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.contrib import messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -117,6 +118,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -134,3 +137,16 @@ EMAIL_HOST_USER = 'kangabejuliette@gmail.com'
 EMAIL_HOST_PASSWORD = 'Juruyuly'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+# EMAIL_HOST=os.environ.get('EMAIL_HOST')
+# EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
+# EMAIL_USE_TLS=os.environ.get('EMAIL_USE_TLS')
+# EMAIL_PORT=os.environ.get('EMAIL_PORT')
+
+
+MESSAGE_TAGS={
+    messages.ERROR:'danger'
+}
+
+LOGIN_URL='login'
+LOGIN_REDIRECT_URL='home'
