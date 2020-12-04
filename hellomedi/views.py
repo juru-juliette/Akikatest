@@ -25,9 +25,6 @@ from django.contrib.auth import authenticate,login
 from .forms import PostForm,NewsLetterForm
 # Create your views here.
 
-# def home(request):
-    
-#     return render(request, 'index.html')
 
 class HomeView(View):
     def get(self, request):
