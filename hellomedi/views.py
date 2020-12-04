@@ -26,8 +26,13 @@ from .forms import PostForm,NewsLetterForm
 # Create your views here.
 
 # def home(request):
-#     return HttpResponse('Welcome to Hello medical')
+    
 #     return render(request, 'index.html')
+
+class HomeView(View):
+    def get(self, request):
+        return render(request, 'index.html')
+
  
 def news_update(request):
    
@@ -154,7 +159,9 @@ class LoginView(View):
         if context['has_error']:
             return render(request, 'auth/login.html', status=401, context=context)
         login(request, user)
-        return render(request, 'index.html', {"letterForm":form})
+        return redirect('home')
+        
+
 
     
 class ActivateAccountView(View):
@@ -182,7 +189,8 @@ def post(request):
             post.user = current_user
             
             post.save()
-        # return redirect('home')
+        return redirect('home')
+        
 
     else:
         form = PostForm()
