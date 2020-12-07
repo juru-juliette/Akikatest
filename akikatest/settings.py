@@ -150,6 +150,3 @@ LOGIN_REDIRECT_URL='home'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-# Extra places for collectstatic to find static files.
-
