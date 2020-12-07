@@ -26,7 +26,7 @@ SECRET_KEY = '(^@%l=_tdt65v^#if(pv)nxw=&0f!6s==h!ld^f_0t(%8t7b70'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['testakika.herokuapp.com','127.0.0.1']
 
 
 # Application definition
