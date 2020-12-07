@@ -81,11 +81,14 @@ WSGI_APPLICATION = 'akikatest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myproject',
-        'USER': 'juru' ,
-        'PASSWORD':'Coders',
+        'NAME': 'dfpfsr71m00qde',
+        'HOST': 'ec2-23-23-88-216.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'USER': 'xrnosnbpmepumz' ,
+        'PASSWORD':'a974b5f0d20ac1751ff1f9517e1a4320c2b313fabdb81e208cb61736b5ac1b4d',
     }
 }
+
 
 
 # Password validation
