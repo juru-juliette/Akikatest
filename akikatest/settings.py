@@ -91,6 +91,7 @@ DATABASES = {
 
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -141,7 +142,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kangabejuliette@gmail.com'
 EMAIL_HOST_PASSWORD = 'Juruyuly'
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+
 
 
 MESSAGE_TAGS={
