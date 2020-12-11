@@ -63,6 +63,15 @@ class RegistrationView(View):
         full_name = request.POST.get('name')
         password = request.POST.get('password')
         password2 = request.POST.get('password2')
+        if username == '':
+            messages.add_message(request, messages.ERROR,
+                                 'Username is required')
+            context['has_error'] = True
+
+        if full_name == '':
+            messages.add_message(request, messages.ERROR,
+                                 'Fullname is required')
+            context['has_error'] = True
         if len(password) < 6:
             messages.add_message(request, messages.ERROR,
                                  'passwords should be atleast 6 characters long')
@@ -186,6 +195,8 @@ def post(request):
             post.user = current_user
             
             post.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'your appointment received well, We will help you soon')
         return redirect('home')
         
 
